@@ -1,0 +1,256 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Own styling starts here */
+
+html {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1460 1fr;
+    height: 1000px;
+}
+
+.content {
+    grid-column-start: 2;
+    display: grid;
+    grid-template: 659px 200px 54px / repeat(4, 360px);
+    overflow: hidden;
+}
+
+.focus {
+    grid-area: 1 / 1 / 2 / -1;
+    display: grid;
+    justify-content: center;
+    background: url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg) 50% 100% no-repeat;
+}
+
+.focus-positioner {
+    width: 1000px;
+}
+
+.focus-positioner header {
+    padding-top: 20px;
+}
+
+
+/* Nav styling */
+
+.shop-nav {
+    display: grid;
+    grid-template-columns: repeat(8, 104px) 164px;
+    padding-bottom: 50px;
+}
+
+.nav-btn {
+    display: grid;
+    background: linear-gradient(#888, #707070, #707070 50%, #5e5e5e 50%, #5e5e5e ,#757575);
+    height: 36px;
+    width: auto;
+    place-items: center;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f7f7f7;
+    font-size: 12px;
+    font-weight: 550;
+    border-left: 1px #606060 solid;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(#636363, #636363 50%, #464646 50% , #464646);
+}
+
+.nav-btn:last-child:hover {
+    background: linear-gradient(#888, #707070, #707070 50%, #5e5e5e 50%, #5e5e5e ,#757575);
+}
+
+.nav-btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: initial;
+}
+
+.nav-btn:first-child {
+    border-left: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.apple {
+    height: 36px;
+    overflow: hidden;
+    display: grid;
+    margin-top: 3px;
+}
+
+footer {
+    grid-area: -2 / 1 / -1 / -1;
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
+    margin: 8px 13px;
+}
+
+.search-glass-placeholder {
+    height: 15px;
+    width: 50px;
+    grid-column-start: 1;
+    overflow: hidden;
+    align-self: center;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+
+.search {
+    grid-column-start: 2;
+    align-self: center;
+    height: 16px;
+    width: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Pitch styling */
+
+.pitch {
+    cursor: pointer;
+    margin-top: 110px;
+}
+
+.pitch h1 {
+    height: 100px;
+    overflow: hidden;
+}
+
+h1 img {
+    height: 104px;
+    width: 980px;
+}
+
+h2 img {
+    height: 82px;
+    width: 980px;
+}
+
+.pitch div {
+    padding-top: 20px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.pitch div img {
+    height: 64px;
+    width: 980px;
+}
+
+/* Bottom section styling */
+
+.btm-imgs {
+    padding: 2px;
+    cursor: pointer;
+}
+
+.btm-imgs img {
+    height: 200px;
+    width: 364px;
+}
+
+/* Footer styling */
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(110, 110, 110);
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 26px;
+    width: 980px;
+    justify-self: center;
+}
+
+.page-footer a {
+    text-decoration: none;
+    color: rgb(0, 136, 204);
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-info div {
+    padding-top: 15px;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.site-nav li {
+    padding-left: 6px;
+    margin-left: 6px;
+    border-left: 1px solid #ccc;
+    height: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.site-nav :first-child {
+    border: none;
+}
